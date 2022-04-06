@@ -71,7 +71,7 @@ class ProductController extends Controller
         $userId=Session::get('user')['id'];
        $total =  $products= DB::table('cart')
             ->join('products','cart.product_id','=','products.id')
-            ->where('cart.user_id', $userId)
+            ->where('cart.user_id',$userId)
             ->sum('products.price');
 
         return view('ordernow',['total'=>$total]);
@@ -94,7 +94,7 @@ class ProductController extends Controller
             Cart::where('user_id', $userId)->delete();
         }
         $request->input();
-        return redirect('/');
+        return redirect('/mpesa');
     }
 
     function myOrders()
@@ -106,6 +106,13 @@ class ProductController extends Controller
             ->get();
 
         return view('myorders',['orders'=>$orders]);
+    }
+
+    function search(Request $request)
+    {
+        $data = Product::where('name', 'like', '%'.$request->input('query').'%')
+                 ->get();
+        return view('search', ['products'=>$data]);
     }
 
 

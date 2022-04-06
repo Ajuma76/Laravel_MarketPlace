@@ -19,7 +19,7 @@
                 </form>
                 <br>
                 <br>
-                <buttom class="btn btn-success">Buy Now</buttom>
+                <a href="/mpesa"><buttom class="btn btn-success">Buy Now</buttom></a>
                 <br>
             </div>
         </div>

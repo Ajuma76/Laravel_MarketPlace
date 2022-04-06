@@ -50,7 +50,7 @@
             </div>
         </div>
     </div>
-    <a href="{{route("uploadFile")}}" class="btn btn-info btn-block">Upload product</a>
+
 
 
 @endsection

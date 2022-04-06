@@ -32,12 +32,12 @@
                     </div>
                     <div class="form-group">
                         <label for="pwd">Payment Method</label> <br> <br>
-                        <input type="radio" value="cash" name="payment"> <span>online payment</span> <br> <br>
-                        <input type="radio" value="cash" name="payment"> <span>EMI payment</span> <br><br>
+                        <input type="radio" value="cash" name="payment"> <span>Online payment</span> <br> <br>
+                        <input type="radio" value="cash" name="payment"> <span>MPesa payment</span> <br><br>
                         <input type="radio" value="cash" name="payment"> <span>Payment on Delivery</span> <br> <br>
 
                     </div>
-                    <button type="submit" class="btn btn-success">Order Now</button>
+                    <a href="/mpesa"><button type="submit" class="btn btn-success">Buy Now</button></a>
                 </form>
             </div>
         </div>

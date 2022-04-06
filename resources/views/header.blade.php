@@ -25,8 +25,11 @@ if (Session::has('user'))
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
                 <li><a href="/myorders">Orders</a></li>
+                <li><a href="/products">Recent Uploads</a></li>
+                <li><a href="{{route("uploadFile")}}">Upload a Product</a></li>
+
             </ul>
-            <form class="navbar-form navbar-left">
+            <form class="navbar-form navbar-left" action="/search">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
                 </div>
