@@ -45,7 +45,7 @@ class UploadController extends Controller
             $product["gallery"] = $productFileName;
             $productFile->move("uploads",$productFileName);
             Upload::create($product);
-            echo "File save successfully";
+            echo "File saved successfully";
         }else{
             echo "Select files to upload";
         }

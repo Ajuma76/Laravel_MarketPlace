@@ -17,11 +17,11 @@
                 <form action="/add_to_cart" method="post">
                     @csrf
                     <input type="hidden" name="product_id" value="{{$item['id']}}">
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <a href=""></a> <button class="btn btn-primary">Add to Cart</button></a>
                 </form>
                 <br>
                 <br>
-                <buttom class="btn btn-success">Buy Now</buttom>
+                <a href="/mpesa"><buttom class="btn btn-success">Buy Now</buttom></a>
                 <br>
             </div>
                 @endforeach

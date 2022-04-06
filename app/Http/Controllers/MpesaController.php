@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Mpesa;
 
 class MpesaController extends Controller
@@ -25,5 +26,10 @@ class MpesaController extends Controller
         $Remarks = "Thank you choosing us";
         $stkPushSimulation=$mpesa->STKPushSimulation($BusinessShortCode, $LipaNaMpesaPasskey, $TransactionType,
             $Amount, $PartyA, $PartyB, $PhoneNumber, $CallBackURL, $AccountReference, $TransactionDesc, $Remarks);
+        Session::flash("success","Successful");
+        return redirect()->back();
     }
+
+
+
 }

@@ -3,6 +3,9 @@
     <div class=" row custom-products">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
+           @if(\Illuminate\Support\Facades\Session::has("success"))
+                <div class="alert alert-success">Successful</div>
+            @endif
             <table class="table">
 
                 <tbody>
